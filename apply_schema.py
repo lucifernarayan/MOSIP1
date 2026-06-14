@@ -8,8 +8,8 @@ from backend.database.db import engine
 with open("backend/database/schema.sql", "r", encoding="utf-8") as f:
     raw_sql = f.read()
 
-# Split on semicolons, skip empty/comment-only statements
-statements = [s.strip() for s in raw_sql.split(";") if s.strip() and not s.strip().startswith("--")]
+# Split on semicolons, skip empty statements
+statements = [s.strip() for s in raw_sql.split(";") if s.strip()]
 
 print("[MOSIP] Applying schema ...")
 

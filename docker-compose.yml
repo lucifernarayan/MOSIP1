@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: mosip-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: mosip
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pg_secure_password_change_me
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: mosip-qdrant
+    restart: always
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: mosip-backend
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      # Connect to the local Postgres container on port 5432
+      - DATABASE_URL=postgresql://postgres:pg_secure_password_change_me@postgres:5432/mosip
+      # Connect to the local Qdrant container
+      - QDRANT_HOST=http://qdrant:6333
+      # Add your Groq API key here for agent orchestration
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    depends_on:
+      - postgres
+      - qdrant
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: frontend/Dockerfile
+      args:
+        # NEXT_PUBLIC_ variables are baked in at build time. For client-side requests, 
+        # this must point to the URL accessible by the browser (e.g., http://localhost:8000 
+        # or your production backend domain), not the internal container address.
+        - NEXT_PUBLIC_MOSIP_API_BASE=http://localhost:8000
+    container_name: mosip-frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  pg_data:
+  qdrant_data:
