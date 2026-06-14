@@ -3,6 +3,7 @@ import {
   Binary,
   BookOpen,
   BrainCircuit,
+  Coins,
   FileText,
   Gauge,
   Globe2,
@@ -56,6 +57,7 @@ export const navItems: NavItem[] = [
   { href: "/simulator", label: "Simulator", eyebrow: "Pre-launch what-if", icon: Gauge },
   { href: "/regulations", label: "Regulations", eyebrow: "Semantic retrieval", icon: BookOpen },
   { href: "/reports", label: "Reports", eyebrow: "Executive output", icon: FileText },
+  { href: "/business", label: "Business Model", eyebrow: "Market & monetization", icon: Coins },
   { href: "/architecture", label: "Architecture", eyebrow: "Agent graph", icon: Network },
 ];
 
