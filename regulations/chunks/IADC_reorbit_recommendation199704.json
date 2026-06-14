@@ -1,0 +1,27 @@
+[
+  {
+    "chunk_id": 0,
+    "source_document": "IADC_reorbit_recommendation199704",
+    "text": "IADC-97-04 \nDecember 12 1997 \n \n \n \n \nINTER-AGENCY SPACE DEBRIS COORDINATION COMMITTEE \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nIADC Recommendation  \nReorbit Procedure for GEO Preservation \nIssued by WG4  \n \n \n \n \n \n \n \n \n \n15th IADC Meeting                                              Working Group 4 \nHouston, Texas, U.S.A. \n \nWG4- \nGEO PROTECTION \n(Action Item 12.6) \n \n1. Basic Requirement \n \n1.1 Definition \n \n \n \n  \n                                                    \n \n \n                              \n                                  \n \n \n                                                                 \n \n \nΔHr = altitude increase in GEO plane of reorbited S/C  \nh pert max = max descent of reorbited S/C due to perturbations \nh geo = minimum altitude of space above GEO which is to be protected \n \nBasic Requirement: \n \n \n \n \n 1.2 Recommendation: \n  \nΔHr – h pert max ≥ h geo \nh geo = 200 km \nGEO \nΔHr\nh \npert\nh geo"
+  },
+  {
+    "chunk_id": 1,
+    "source_document": "IADC_reorbit_recommendation199704",
+    "text": "h geo = minimum altitude of space above GEO which is to be protected \n \nBasic Requirement: \n \n \n \n \n 1.2 Recommendation: \n  \nΔHr – h pert max ≥ h geo \nh geo = 200 km \nGEO \nΔHr\nh \npert\nh geo\n \n \n \n15th IADC Meeting                                     Working Group 4   \nHouston, Texas, U.S.A. \n \nWG4-201 \n2. Determination of ΔHr min \n \n \n \n2.1 Definition \n \n \nh pert max = h1 +h2 \n         h1 = luni-solar and geopotential perturbations \n         h2 = k x Cr x A/m = solar pressure perturbations \n \n2.2 Recommendation \n          \nh1 = 35km (in disposal orbit) \n         k = 1000 \n         Cr = 1.0 to 2.0 depending on S/C \n         A/m = 0.01 to 0.10 depending on S/C \n \n                                \n \n or \n \n                                           \n \n \ndepending on S/C: \n \n- \nS/C operator to apply the appropriate values for Cr and A/m depending on the S/C \ncharacteristics \n \n- \nS/C operator to assure availability of necessary propellant at end of mission \n \n2.3 Margin"
+  },
+  {
+    "chunk_id": 2,
+    "source_document": "IADC_reorbit_recommendation199704",
+    "text": "S/C operator to apply the appropriate values for Cr and A/m depending on the S/C \ncharacteristics \n \n- \nS/C operator to assure availability of necessary propellant at end of mission \n \n2.3 Margin \n \nIt is encouraged to add a margin to the above minimum value in order to \nreduce the effect of orbital determination inaccuracy, execution errors \nand possible S/C deterioration and break-ups. \n \n3. Recommended guidelines for implementation \n \n- \nUse multiburn procedure \n \n- \nRaise perigee to minimum altitude \n \n- \nIncrease semi-major axis without decreasing perigee by using remaining \nΔHr min ≥ 200 + (45 to 235) km \nΔHr min ≥245 to 435 km\n    ΔHr min ≥ 200 km + h pert max \n15th IADC Meeting                                              Working Group 4 \nHouston, Texas, U.S.A. \n \nWG4-202 \npropellant and, maybe, pressurants \n \n- \nPassivate reorbited S/C  \n \n4. Proposal for IADC recommendation consuming the disposal of GEO S/C \nat end of mission (Action Item 12.6)"
+  },
+  {
+    "chunk_id": 3,
+    "source_document": "IADC_reorbit_recommendation199704",
+    "text": "WG4-202 \npropellant and, maybe, pressurants \n \n- \nPassivate reorbited S/C  \n \n4. Proposal for IADC recommendation consuming the disposal of GEO S/C \nat end of mission (Action Item 12.6) \n \n       - S/C in GEO shall be transferred to a higher altitude at the end of their mission \nin such a way that the reorbited S/C – taking into account its physical \ncharacteristics and the perturbations to which it is subjected – never comes \ncloser to the GEO than 200 km. \n \n- The minimum altitude above GEO to which the S/C shall \nbe transferred shall be calculated applying the formula \n      \n \n \n \nwhere Cr is the BOL reflectivity coefficient and A/m the aspect area (in m2) over \ndry mass (in kg) ratio of the re-orbited S/C. \n \n- The S/C operator/designer shall apply the appropriate values for Cr and A/m \ndepending on the characteristics of the S/C. \n \n- S/C operators/designers are encouraged to add a margin to the above minimum"
+  },
+  {
+    "chunk_id": 4,
+    "source_document": "IADC_reorbit_recommendation199704",
+    "text": "depending on the characteristics of the S/C. \n \n- S/C operators/designers are encouraged to add a margin to the above minimum \naltitude raise in order to reduce the effect of orbital determination inaccuracy, \nexecution errors and possible S/C deterioration and S/C break-ups. \n \n- The S/C operators/designers shall assure availability of the quantity of propellant \nnecessary for the altitude raising at end of mission. \n \n- As a guideline for the implementation of the orbit raising manoeuvre, the S/C \noperator shall: \n        \n- \nUse a multiple burn procedure to raise perigee to the projected minimum \naltitude \n \n- \nIncrease semi-major axis without decreasing perigee using remaining \npropellants and, if feasible, pressurants \n \n- \nPassivate the re-orbited S/C by removing all energy remaining on board.” \nΔHr min ≥ 235 + 1000 x Cr x A/m (km)"
+  }
+]

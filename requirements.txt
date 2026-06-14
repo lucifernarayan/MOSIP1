@@ -1,0 +1,25 @@
+# ── Core API ──────────────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+pydantic==2.10.3
+pydantic-settings==2.6.1
+
+# ── Database ──────────────────────────────────────────────────────────────────
+sqlalchemy==2.0.36
+psycopg2-binary==2.9.10
+python-dotenv==1.0.1
+
+# ── Data ──────────────────────────────────────────────────────────────────────
+requests==2.32.3
+pandas==2.2.3
+numpy>=1.26.0
+
+# ── Vector Store (Qdrant) ─────────────────────────────────────────────────────
+qdrant-client==1.12.1
+sentence-transformers==3.3.1
+
+# ── LLM + Agent Framework ────────────────────────────────────────────────────
+langchain-core>=0.3.29
+langchain-groq==0.2.3
+langgraph==0.2.60
+groq==0.13.0

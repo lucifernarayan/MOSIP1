@@ -1,0 +1,2 @@
+class CelestrakIngestor:
+    pass

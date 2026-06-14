@@ -1,0 +1,307 @@
+ESA 
+ESA/ADMIN/IPOL(2014)2 
+ Director General’s Office 
+Att.: Annexes 2 
+_______ 
+Paris, 28 March 2014 
+ (Original: English) 
+Distribution: all staff 
+ESA unclassified – “Releasable to the Public” 
+Space Debris Mitigation Policy for Agency Projects 
+1.
+INTRODUCTION
+As a consequence of spaceflight activities, the number of functional and non-functional (i.e.: 
+space debris) human-made objects in Earth orbit continues to grow. To minimise the impact 
+of space operations on the orbital environment, to reduce the risk of collision on orbit and to 
+ensure the safety of the public on ground during re-entry, mitigation and safety measures 
+must be anticipated as from the conception of a space system. 
+In May 2011, the 2nd edition of ISO 24113 "Space Systems – Space Debris Mitigation 
+Requirements" was issued as the international standard which establishes the design and 
+operations requirements to minimise the impact of space operations on the orbital 
+environment. On 10th February, 2012, this standard was adopted by the European 
+Coordination on Space Standardisation (ECSS) as the ECSS-U-AS-10C standard (Adoption 
+Notice of ISO 24113: Space Systems – Space debris mitigation requirements). 
+The present Instruction establishes the ESA standard for the technical requirements on space 
+debris mitigation for Agency projects, it sets out the principles governing its implementation 
+and the definition of responsibilities.  
+2.
+POLICY
+In order to ensure a corporate approach on space debris mitigation, it is the Agency’s policy 
+that the ECSS-U-AS-10C is established as the ESA standard (“the standard”) for the 
+technical requirements on space debris mitigation for Agency projects.  
+As the standard foresees that in cases of re-entry the maximum acceptable casualty risk shall 
+be determined by the approving agents, it is the Agency’s policy to define that the maximum 
+acceptable casualty risk for ESA space systems shall be as follows: 
+a) For ESA Space Systems for which the System Requirements Review has already been
+kicked off at the time of entry into force of this Instruction, casualty risk minimisation
+shall be implemented on a best effort basis and documented in the Space Debris
+Mitigation Report.
+b) For ESA Space Systems for which the System Requirements Review has not yet been
+kicked off at the time of entry into force of this Instruction, the casualty risk shall not
+exceed 1 in 10,000 for any re-entry event (controlled or uncontrolled). If the predicted
+casualty risk for an uncontrolled re-entry exceeds this value, an uncontrolled re-entry
+is not allowed and a targeted controlled re-entry shall be performed in order not to
+exceed a risk level of 1 in 10,000.
+2014-0520
+ESA/ADMIN/IPOL(2014)2 
+P a g e  2 
+ 
+3.  
+SCOPE OF APPLICATION 
+ 
+This policy shall apply to:  
+ 
+-   
+the procurement of ESA space systems (e.g.: launchers, satellites, inhabited or robotic 
+vehicles); 
+ 
+- 
+operations, under the responsibility of ESA, of any given space system. 
+ 
+For the procurement of launch services for ESA space systems, all reasonable efforts shall be 
+made to ensure the use of launchers which are compliant with the space debris mitigation 
+technical requirements in the standard. 
+ 
+ 
+4. 
+ASSESSMENT OF COMPLIANCE 
+ 
+During the development phase, compliance of ESA Space Systems with the space debris 
+mitigation requirements shall be assessed in the frame of the Technical Project Reviews . 
+ 
+In case of major deviations from space debris mitigation requirements during the orbital 
+lifetime of space systems operated under ESA responsibility and prior to the start of the 
+disposal phase, the space systems compliance with the space debris mitigation requirements 
+shall be assessed by the Space Debris Mitigation Review Panel chaired by the Head of the 
+Independent Safety Office and composed of experts in the relevant technical disciplines. In 
+case of non-compliance, the Space Debris Mitigation Review Panel shall make 
+recommendations for the approval of an associated Request for Waiver.  
+ 
+ 
+5.  
+RESPONSIBILITIES 
+  
+- 
+Directors, within their respective areas of responsibilities, are responsible for the 
+implementation of this policy. 
+ 
+- 
+Study Managers, Project Managers and Mission Managers are responsible for the 
+preparation and maintenance of the Space Debris Mitigation Plan and Space Debris 
+Mitigation Report in accordance with the Implementation Requirements described in 
+Annex 1. 
+ 
+- 
+The Director in charge of technical and quality management and the relevant 
+Programme Director are delegated by the Director General the responsibility and 
+authority to approve waivers to requirements in the standard.  
+ 
+- 
+The Head of the Department in charge of product assurance and safety is delegated by 
+the Director in charge of technical and quality management, the responsibility for the 
+management of the implementation of this policy and the approval of the Space 
+Debris Mitigation Plan at the time of System Requirements Review and the Space 
+Debris Mitigation Report at the time of Acceptance Review. 
+ 
+- 
+The ESA Inspector General is responsible for ensuring that the implementation of the 
+applicable requirements and the Space Debris Mitigation Plan and Report, are 
+reviewed in the frame of the Technical Project Reviews.   
+ESA/ADMIN/IPOL(2014)2 
+Page 3 
+The Head of the Independent Safety Office is the Technical Authority delegated by 
+the Head of the Department in charge of product assurance and safety for: 
+the maintenance of the Space Debris Mitigation Policy with the related 
+requirements; 
+the independent supervision of their verification of compliance and 
+the processing of waivers with the technical assistance and expertise of the 
+Directorate in charge of technical and quality management and the Space 
+Debris Office of the Directorate in charge of operations. 
+The Head of the Independent Safety Office is responsible for the periodic compilation 
+of a report on the status of implementation of the Space Debris Mitigation Policy for 
+all ESA projects. 
+6. 
+EVALUATION OF THE POLICY 
+The effectiveness of this policy will be evaluated by the Head of the Department in charge of 
+product assurance and safety on a periodic basis, or at the request of the Director General. 
+7. 
+VALIDITY 
+This Instruction is effective for a period of four years subject to prior revocation or revision 
+as determined by the Director General. Not later than 6 months before the end of its period of 
+validity, the present instruction shall be the subject of a review to establish whether it requires 
+being extended, modified or revoked. Such review shall be carried out in compliance with the 
+procedure applicable to the review of DG Instructions. 
+8. 
+PUBLICITY 
+This instruction shall be made publicly available through appropriate means. 
+9. 
+SUPERSEDED INSTRUCTION 
+This Instruction supersedes ESA/ADMIN/IPOL(2008)2. 
+IO. 
+ENTRY INTO FORCE 
+This Instruction enters into force on the day of its publication. 
+~-
+Jean-Jacques tordain 
+Director General 
+ESA/ADMIN/IPOL(2014)2 
+Annex 1 
+ 
+ 
+ 
+P a g e  1 
+ 
+ 
+Annex 1  
+ 
+IMPLEMENTATION REQUIREMENTS  
+ 
+ 
+1. RESPONSIBILITIES 
+ 
+To implement the space debris mitigation policy for Agency projects, the Study Managers for 
+the mission analysis and feasibility phase, the Project Managers for the development phases 
+and the Mission Managers for the mission operations/utilisation phase shall ensure the 
+execution of the following activities in order to implement the applicable space debris 
+mitigation requirements : 
+ 
+- definition of derived design requirements specifications at system and sub-system 
+level; 
+- verification of compliance with the design requirements; 
+- definition and verification of necessary operational procedures prior to launch; 
+- preparation of documentation and submittal for review to the ESA Technical 
+Reviews; 
+- release the Requests for Waiver for any case of non-compliance with the applicable 
+requirements and provide supporting justification (as relevant) to the Independent 
+Safety Office for assessment and processing. 
+ 
+2. DOCUMENTATION 
+ 
+Starting with the Preliminary Requirements Review, the project shall provide a Space Debris 
+Mitigation Plan (SDMP) documenting how the compliance with the requirements is intended 
+to be achieved and containing as a minimum: 
+1. Statement of planned compliance of the proposed design with all the space debris 
+mitigation requirements, including justification for all non-compliances; 
+2. Description of design and operational measures planned for achieving compliance 
+with the space debris mitigation requirements; 
+3. Identification of the verification and validation methods and plans to demonstrate 
+compliance with the applicable space debris mitigation requirements; 
+4. For space systems that will re-enter: 
+• Preliminary re-entry casualty risk analysis with rationale for the planned re-entry 
+approach and identification of the tools and methodologies used for the 
+assessment ; 
+• Identification of the space system functions that contribute to the planned 
+controlled re-entry, if applicable; 
+• Identification of the re-entry scenario, including nominal and degraded de-orbit 
+cases; 
+• Verification and validation plan to demonstrate compliance with the re-entry 
+casualty risk requirement. 
+ESA/ADMIN/IPOL(2014)2 
+Annex 1 
+P a g e  2 
+ 
+Starting with the Preliminary Design Review, the project shall provide a Space Debris 
+Mitigation Report ( SDMR) documenting the implementation and verification of the 
+space debris mitigation requirements to be updated at each major project review and 
+submitted for approval at the time of the Acceptance Review. 
+  
+The Space Debris Mitigation Report shall report the analysis performed and the 
+mitigation measures adopted by the project to comply with the space debris mitigation 
+requirements; the SDMR shall contain as a minimum: 
+1. 
+Description of the design and operational measures implementation for achieving 
+compliance with the Space Debris Mitigation requirements; 
+2. 
+Analysis and test reports in support of the implementation of the space debris 
+mitigation requirements; 
+3. 
+List of objects (mission-related objects or space debris) planned to be released as 
+part of the nominal mission, including physical characteristics, orbital 
+characteristics and predicted orbital lifetime; 
+4. 
+List of events which can cause violation of the requirements and relevant 
+consequences ( e.g., description and characteristics of debris generated, etc. ); 
+5. 
+Verification Control Document covering all space debris mitigation requirements 
+with related justification; 
+6. 
+Assessment of the compliance of the selected launch services with the space 
+debris mitigation technical requirements in the standard; 
+7. 
+For space systems that will re-enter: 
+• Re-entry casualty risk analysis, including methodology, assumptions, 
+model uncertainties, identification of simulation tools, and results of the 
+assessment for both nominal and degraded cases; 
+• Description of the space system functions that contribute to the controlled 
+re-entry, if applicable; 
+• Description of the re-entry scenario, including nominal and degraded de-
+orbit cases; 
+• Definition of the flight rules; 
+• Definition of the notification Plan to the Authorities. 
+ 
+The Space Debris Mitigation Plan shall be provided at: 
+- 
+Preliminary Requirements Review in preliminary form for review; 
+- 
+System Requirements Review for review/approval. 
+ 
+ 
+The Space Debris Mitigation Report shall be provided at: 
+- 
+Preliminary Design Review for review; 
+- 
+Critical Design Review for review; 
+- 
+Acceptance Review for review /approval. 
+ 
+Guidelines for the verification of the compliance to the requirements in the policy will be 
+provided in the “ESA Space Debris Mitigation Compliance Verification Guidelines “. 
+ 
+ESA/ADMIN/IPOL(2014)2 
+Annex 2 
+P a g e  1 
+ 
+Annex 2 
+ 
+TERMS AND DEFINITIONS  
+ 
+ 
+Approving agent:  
+entity from whom approval is sought for the implementation of 
+the space debris mitigation requirements with respect to the 
+procurement of a spacecraft, or its launch, or its operations in 
+space, or combination of those activities. 
+Casualty Risk:  
+ 
+the probability of serious injury or death. 
+Disposal :  
+actions performed by a spacecraft or launch vehicle orbital 
+stage to permanently reduce its chance of accidental break-up 
+and to achieve its required long-term clearance of the protected 
+regions. 
+Disposal Phase:  
+begins at the end of the operational phase of the Space System, 
+and ends when either the Space System has performed a direct 
+re-entry or completed its disposal activities (having reached its 
+disposal orbit and having completed its passivation). 
+ESA Space Systems  
+all Space Systems procured under ESA Programmes including 
+launchers, satellites , inhabited or robotic vehicles. 
+End of Life:   
+ 
+end of disposal phase. 
+Operational Phase: 
+period of time during which a space system performs planned 
+tasks and functions prior to its disposal. 
+Orbital lifetime: 
+period of time from when the spacecraft or launch vehicle 
+orbital stage achieves Earth orbit to when it commences re-
+entry. 
+Space Debris: 
+any man-made space object, including fragments and elements 
+thereof, in Earth orbit or re-entering the Earth’s atmosphere, 
+that is non-functional (IADC definition). 
+Re-entry: 
+process in which atmospheric drag cascades deceleration of a 
+spacecraft or launch vehicle orbital stage (or any part thereof), 
+leading to its destruction or return to earth. 
+ 

@@ -1,0 +1,624 @@
+IADC-02-01 Rev. 4 
+January 2025 
+ 
+IADC Space Debris Mitigation 
+Guidelines 
+Issued by IADC Steering Group and Working Group 4 
+ 
+ 
+ 
+IADC-02-01 Rev. 4 
+1 
+IADC Space Debris Mitigation Guidelines 
+Table of Contents 
+Table of Contents .................................................................................................................................. 1 
+Revision History ................................................................................................................................... 2 
+List of Abbreviations ............................................................................................................................ 3 
+Foreword ............................................................................................................................................... 4 
+Introduction ........................................................................................................................................... 6 
+IADC Space Debris Mitigation Guidelines ....................................................................................... 7 
+1 
+Scope .............................................................................................................................................. 7 
+2 
+Application .................................................................................................................................... 7 
+3 
+Terms and definitions .................................................................................................................. 8 
+3.1 
+Space Debris .......................................................................................................................... 8 
+3.2 
+Spacecraft, Launch Vehicles, Orbital Stages, and Constellations .................................. 8 
+3.3 
+Orbits and Protected Regions ............................................................................................. 8 
+3.4 
+Mitigation Measures and Related Terms .......................................................................... 9 
+3.5 
+Operational Phases ............................................................................................................. 10 
+4 
+General Guidance ....................................................................................................................... 11 
+5 
+Mitigation Measures .................................................................................................................. 11 
+5.1 
+Limit Debris Released during Normal Operations ........................................................ 11 
+5.2 
+Minimise the Potential for On-Orbit Explosive Break-ups ........................................... 11 
+5.2.1 
+Minimise the potential for post-mission break-ups resulting from stored energy ......... 12 
+5.2.2 
+Minimise the potential for break-ups during operational phases ..................................... 12 
+5.2.3 
+Avoidance of intentional destruction and other harmful activities .................................. 13 
+5.3 
+Post-Mission Disposal ........................................................................................................ 13 
+5.3.1 
+Geosynchronous Region ......................................................................................................... 13 
+5.3.2 
+Objects Passing Through the Low Earth Orbit Protected Region ..................................... 14 
+5.3.3 
+Other Orbits .............................................................................................................................. 15 
+5.4 
+Prevention of On-Orbit Collisions ................................................................................... 15 
+5.5 
+Constellations ...................................................................................................................... 15 
+6 
+Update.......................................................................................................................................... 16 
+ 
+ 
+ 
+IADC-02-01 Rev. 4 
+2 
+IADC Space Debris Mitigation Guidelines 
+Revision History 
+Issue 
+Revision 
+Date 
+Reason for Revision 
+1 
+0 
+2002-10-15 
+Initial Version 
+1 
+1 
+2007-09-01 
+First revision with clarifications 
+1 
+2 
+2020-03-01 
+Update section 5.3.2 to include post mission disposal 
+success rate values. 
+1 
+3 
+2021-06-10 
+Third revision including clarifications and target 
+values on GEO disposal, break-up causes, operational 
+phases, and re-entry risks. 
+1 
+4 
+2025-01-16 
+Update adding new section on large constellations, 
+addressing physical separation of constellations and 
+individual spacecraft orbits, in-orbit commissioning 
+and cumulative re-entry risk; high disposal success 
+rate encouraged in LEO; recommendations on 
+trackability of small space objects. 
+ 
+ 
+ 
+IADC-02-01 Rev. 4 
+3 
+IADC Space Debris Mitigation Guidelines 
+List of Abbreviations 
+Abbreviation 
+Description 
+ASI 
+Agenzia Spaziale Italiana (Italian Space Agency) 
+CNES 
+Centre National d'Etudes Spatiales 
+CNSA 
+China National Space Administration 
+CSA 
+Canadian Space Agency 
+DLR 
+Deutsches Zentrum für Luft- und Raumfahrt 
+(German Aerospace Center) 
+ESA 
+European Space Agency 
+GEO 
+Geostationary Earth Orbit 
+GTO 
+Geostationary Transfer Orbit 
+IADC 
+Inter-Agency Space Debris Coordination Committee 
+ISRO 
+Indian Space Research Organisation 
+JAXA 
+Japan Aerospace Exploration Agency 
+KARI 
+Korea Aerospace Research Institute 
+LEO 
+Low Earth Orbit 
+NASA 
+National Aeronautics and Space Administration 
+ROSCOSMOS 
+Russian Space State Corporation 
+SSAU 
+State Space Agency of Ukraine 
+UKSA 
+UK Space Agency 
+ 
+ 
+ 
+IADC-02-01 Rev. 4 
+4 
+IADC Space Debris Mitigation Guidelines 
+Foreword 
+The Inter-Agency Space Debris Coordination Committee (IADC) is an international forum of 
+space agencies, authorized governmental or inter-governmental entities for the coordination 
+of activities related to the issues of human-made and natural debris in space. The primary 
+purpose of the IADC is to exchange information on space debris research activities between 
+member space agencies, to facilitate opportunities for co-operation in space debris research, to 
+review the progress of ongoing co-operative activities and to identify debris mitigation 
+options. 
+Members of the IADC are the Italian Space Agency (ASI), Centre National d’Etudes Spatiales 
+(CNES), China National Space Administration (CNSA), Canadian Space Agency (CSA), 
+German Aerospace Center (DLR), European Space Agency (ESA), Indian Space Research 
+Organisation (ISRO), Japan Aerospace Exploration Agency (JAXA), Korea Aerospace Research 
+Institute (KARI), National Aeronautics and Space Administration (NASA), Russian State 
+Space Corporation (ROSCOSMOS), State Space Agency of Ukraine (SSAU), and United 
+Kingdom Space Agency (UKSA). 
+One of its efforts is to recommend debris mitigation guidelines, with an emphasis on cost 
+effectiveness, that can be considered during planning, design and operation of spacecraft and 
+launch vehicles in order to minimise or eliminate generation of debris during and after the 
+missions. This document provides guidelines for debris reduction, developed via consensus 
+within the IADC. 
+In the process of producing these guidelines, IADC got information from the following 
+documents and study reports: 
+- 
+Technical Report on Space Debris, Text of the report adopted by the Scientific and 
+Technical Subcommittee of the United Nations Committee on the Peaceful Uses of 
+Outer Space, 1999 
+- 
+Interagency report on Orbital Debris 1995, The National Science and Technology 
+Council Committee on Transportation Research and Development, November 1995 
+- 
+JAXA Space Debris Mitigation Standard, JMR-003E, 2023 
+- 
+Technical Regulation associated to the French Space Operation Act, June 28, 2024 
+- 
+Orbital Debris Mitigation, NASA NPR 8715.6E, 2024 
+- 
+Process for Limiting Orbital Debris, NASA-STD-8719.14C, 2021 
+- 
+Space Technology Items. General Requirements Mitigation of Space Debris 
+Population. Russian Aviation & Space Agency Standard OCT 134-1023-2000 
+- 
+IAA Position Paper on Orbital Debris – Edition 2001, International Academy of 
+Astronautics, 2001 
+- 
+ESA Space Debris Mitigation Requirements, ESSB-ST-U-007, Issue 1 Revision 0, 2023 
+- 
+Space technology items. General requirements for mitigation of space debris 
+population. National standard of the Russian Federation. GOST R 52925-2008 
+- 
+Stability of the Future LEO Environment, IADC-12-08, Rev. 1, January 2013 
+ 
+ 
+IADC-02-01 Rev. 4 
+5 
+IADC Space Debris Mitigation Guidelines 
+- 
+U.S. Government Orbital Debris Mitigation Standard Practices, 2019 
+- 
+ESA Re-entry Safety Requirements, ESSB-ST-U-004, Issue 1 Revision 0, 2017 
+- 
+ESA Space Debris Mitigation Compliance Verification Guidelines, ESSB-HB-U-002, 
+Issue 2 Revision 0, 2023. 
+ 
+ 
+ 
+ 
+IADC-02-01 Rev. 4 
+6 
+IADC Space Debris Mitigation Guidelines 
+Introduction 
+It was a common understanding at the time when the United Nations Committee on the 
+Peaceful Uses of Outer Space (UN COPUOS) published its Technical Report on Space Debris 
+in 1999, that human-made space debris posed limited risk to ordinary robotic spacecraft in 
+Earth orbit, but the population of debris was already growing. The probability of collisions 
+that could lead to potential damage has consequently increased ever since. It has now become 
+common practice to consider the collision risk with space debris in planning a mission. So, the 
+implementation of debris mitigation measures today is still a prudent and necessary step 
+towards preserving the space environment for future generations. 
+Several national and international organisations of the space faring nations have established 
+Space Debris Mitigation Standards or Handbooks to promote efforts to deal with space debris 
+issues. The contents of these Standards and Handbooks may be slightly different from each 
+other but their fundamental principles are the same: 
+(1) Preventing explosive and collisional on-orbit break-ups 
+(2) Removing spacecraft and orbital stages that have reached the end of their mission 
+operations from the useful densely populated orbit regions 
+(3) Limiting the objects released during normal operations. 
+The IADC guidelines are based on these common principles and have been agreed to by 
+consensus among the IADC member agencies. 
+ 
+ 
+ 
+ 
+IADC-02-01 Rev. 4 
+7 
+IADC Space Debris Mitigation Guidelines 
+IADC Space Debris Mitigation Guidelines 
+1 Scope 
+The IADC Space Debris Mitigation Guidelines, hereafter called Guidelines, describe existing 
+practices that have been identified and evaluated for limiting the generation of space debris in 
+the environment. The purpose, feasibility, practices, and tailoring guide for each 
+recommendation addressed in the Guidelines can be found in the Support Document to the 
+Guidelines. 
+The Guidelines cover the overall environmental impact of the missions with a focus on the 
+following: 
+(1) Limitation of debris released during normal operations, 
+(2) Minimisation of the potential for on-orbit break-ups, 
+(3) Post-mission disposal, 
+(4) Prevention of on-orbit collisions. 
+2 Application 
+The IADC Space Debris Mitigation Guidelines are applicable to mission planning and the 
+design and operation of spacecraft and orbital stages that will be injected into Earth orbit. 
+Organisations are encouraged to use these Guidelines in identifying the standards that they 
+will apply when establishing the mission requirements for planned spacecraft and orbital 
+stages. 
+Operators of existing spacecraft and orbital stages are encouraged to apply these guidelines to 
+the greatest extent possible. 
+ 
+ 
+ 
+ 
+IADC-02-01 Rev. 4 
+8 
+IADC Space Debris Mitigation Guidelines 
+3 Terms and definitions 
+The following terms and definitions are added for the convenience of the readers of this 
+document. They should not necessarily be considered to apply more generally. 
+3.1 Space Debris 
+Space debris are all human made objects including fragments and elements thereof, in Earth 
+orbit or re-entering the atmosphere, that are non-functional. During the operational phases, a 
+spacecraft or orbital stage can be considered as functional. 
+3.2 Spacecraft, Launch Vehicles, Orbital Stages, and Constellations 
+3.2.1 
+Spacecraft – an orbiting object designed to perform a specific function or mission (e.g. 
+communications, navigation or Earth observation). 
+3.2.2 
+Launch vehicle – any vehicle constructed for ascent to outer space, and for placing one 
+or more objects in outer space, and any sub-orbital rocket. 
+3.2.3 
+Launch vehicle orbital stages – any stage of a launch vehicle left in Earth orbit. 
+3.2.4 
+Constellation – a set of spacecraft operating in a coordinated manner to create a single 
+larger system, often based on a recurring spacecraft design and operating in similar orbits. 
+Examples include the space segments of satellite navigation systems or systems dedicated to 
+global communication. Some agencies use a lower limit of 100 spacecraft to identify what is 
+considered a large constellation. 
+3.3 Orbits and Protected Regions 
+3.3.1 
+Equatorial radius of the Earth – the equatorial radius of the Earth is taken as 6,378 km 
+and this radius is used as the reference for the Earth’s surface from which the orbit regions are 
+defined. 
+3.3.2 
+Protected regions – any activity that takes place in outer space should be performed 
+while recognising the unique nature of the following regions, A and B, of outer space (see 
+Figure 1), to ensure their future safe and sustainable use. These regions should be protected 
+regions with regard to the generation of space debris. 
+(1) Region A, Low Earth Orbit (or LEO) Protected Region – spherical region that extends 
+from the Earth’s surface up to an altitude (Z) of 2,000 km 
+ 
+ 
+ 
+ 
+IADC-02-01 Rev. 4 
+9 
+IADC Space Debris Mitigation Guidelines 
+(2) Region B, the Geosynchronous (or GEO) Protected Region – a segment of the spherical 
+shell defined by the following: 
+lower altitude = geostationary altitude minus 200 km 
+upper altitude = geostationary altitude plus 200 km 
+-15 degrees ≤ latitude ≤ +15 degrees 
+geostationary altitude (ZGEO) = 35,786 km (the altitude of the geostationary Earth 
+orbit) 
+ 
+Figure 1: Protected regions 
+3.3.3 
+Geostationary Earth Orbit (GEO) – Earth orbit having zero inclination and zero 
+eccentricity, whose orbital period is equal to the Earth's sidereal period. The altitude of this 
+unique circular orbit is close to 35,786 km. 
+3.3.4 
+Geostationary Transfer Orbit (GTO) – an Earth orbit which is or can be used to transfer 
+spacecraft or orbital stages from lower orbits to the geosynchronous region. Such orbits 
+typically have perigees within LEO region and apogees near or above GEO. 
+3.3.5 
+Orbital lifetime – Duration from the time when an object is first present in orbit, 
+whether due to launch or separation from another object, until atmospheric re-entry or 
+retrieval from orbit. 
+3.3.6 
+Residual Orbital lifetime – Duration from the end of the disposal phase until 
+atmospheric re-entry or retrieval from orbit. 
+3.4 Mitigation Measures and Related Terms 
+3.4.1 
+Passivation – the elimination of all stored energy on a spacecraft or orbital stages to 
+reduce the chance of break-up. Typical passivation measures include venting or burning 
+excess propellant, discharging batteries, and relieving pressure vessels. 
+3.4.2 
+De-orbit – intentional changing of orbit for re-entry of a spacecraft or orbital stage into 
+the Earth’s atmosphere. 
+ 
+ 
+IADC-02-01 Rev. 4 
+10 
+IADC Space Debris Mitigation Guidelines 
+3.4.3 
+Re-orbit – intentional changing of a spacecraft or orbital stage’s orbit. 
+3.4.4 
+Break-up – any event that generates fragments, which are released into Earth orbit. 
+This includes: 
+(1) An explosion caused by the chemical or thermal energy from propellants, pyrotechnics 
+and so on; 
+(2) A rupture caused by an increase in internal pressure; 
+(3) A break-up caused by energy from collision with other objects. 
+However, the following events are excluded from this definition:  
+- 
+A break-up during the re-entry phase caused by aerodynamic forces; 
+- 
+The generation of fragments, such as paint flakes, resulting from the ageing and 
+degradation of a spacecraft or orbital stage. 
+Break-ups related to items (1) and (2) above are referred to as explosive break-ups. Break-ups 
+related to item (3) above are referred to as collisional break-ups. 
+3.4.5 
+Post-mission disposal - actions performed by a spacecraft or orbital stage to 
+permanently minimise its effect on the space environment, including re-orbiting/de-orbiting 
+if necessary. 
+3.5 Operational Phases 
+3.5.1 
+Launch phase – begins when the launch vehicle is no longer in physical contact with 
+equipment and ground installations that made its preparation and ignition possible (or when 
+the launch vehicle is dropped from the carrier-aircraft, if any), and continues up to the end of 
+the mission assigned to the launch vehicle. 
+3.5.2 
+Mission phase – the phase where the spacecraft or orbital stage fulfils its mission. 
+Begins at the end of the launch phase or when released on-orbit as part of the mission phase 
+of another spacecraft, and ends at the beginning of the disposal phase. 
+3.5.3 
+Disposal phase – begins at the end of the mission phase for a spacecraft or orbital stage 
+and ends when the spacecraft or orbital stage has performed the actions, if any, to reduce the 
+hazards it poses to other spacecraft and orbital stages. If the spacecraft or orbital stage is on-
+orbit after its disposal phase, it can be considered space debris. 
+3.5.4 
+Normal operation – begins at the start of the mission phase and ends at the end of the 
+disposal phase. 
+ 
+ 
+ 
+ 
+IADC-02-01 Rev. 4 
+11 
+IADC Space Debris Mitigation Guidelines 
+4 General Guidance 
+During an organisation’s planning for and operation of a spacecraft and/or orbital stage, it 
+should take systematic actions to reduce adverse effects on the orbital environment by 
+introducing space debris mitigation measures into the spacecraft or orbital stage’s lifecycle, 
+from the mission requirement analysis and definition phases. 
+In order to manage the implementation of space debris mitigation measures, it is 
+recommended that a feasible Space Debris Mitigation Plan be established and documented for 
+each program and project. The Mitigation Plan should include the following items: 
+(1) A management plan addressing space debris mitigation activities. 
+(2) A plan for the assessment and mitigation of risks related to space debris, including 
+applicable standards. 
+(3) The measures minimising the hazard related to malfunctions that have a potential for 
+generating space debris. 
+(4) A plan for post-mission disposal of the spacecraft and/or orbital stages. 
+(5) Justification of choice and selection when several possibilities exist. 
+(6) Compliance matrix addressing the recommendations of these Guidelines. 
+5 Mitigation Measures 
+5.1 Limit Debris Released during Normal Operations 
+In all operational orbit regimes, spacecraft and orbital stages should be designed not to release 
+debris during normal operations. Where this is not feasible any release of debris should be 
+minimised in number, area and orbital lifetime. 
+Any program, project or experiment that will release objects in orbit should not be planned 
+unless an adequate assessment can verify that the effect on the space environment, and the 
+hazard to other operating spacecraft and orbital stages, is acceptably low in the long-term. 
+The potential hazard of tethered systems should be analysed by considering both an intact and 
+severed system. 
+5.2 Minimise the Potential for On-Orbit Explosive Break-ups 
+On-orbit break-ups caused by the following factors should be prevented using the measures 
+described in 5.2.1 – 5.2.3: 
+(1) The potential for break-ups during mission should be minimised; 
+(2) All space systems should be designed and operated so as to prevent accidental 
+explosions and ruptures after end-of-mission; 
+(3) Intentional destructions, which will generate long-lived orbital debris, should not be 
+planned or conducted. 
+ 
+ 
+IADC-02-01 Rev. 4 
+12 
+IADC Space Debris Mitigation Guidelines 
+5.2.1 Minimise the potential for post-mission break-ups resulting from stored energy 
+In order to limit the risk to other spacecraft and orbital stages from accidental break-ups after 
+the completion of mission operations, all on-board sources of stored energy of a spacecraft or 
+orbital stage, such as residual propellants, batteries, high-pressure vessels, self-destructive 
+devices, flywheels and momentum wheels, should be depleted or made safe when they are no 
+longer required for mission operations or post-mission disposal. Depletion should occur as 
+soon as this operation does not pose an unacceptable risk to the payload. Mitigation measures 
+should be carefully designed not to create other risks. 
+(1) Residual propellants and other fluids, such as pressurant, should be depleted as 
+thoroughly as possible, either by depletion burns or venting, to prevent accidental 
+break-ups by over-pressurisation or chemical reaction. 
+(2) Batteries should be adequately designed and manufactured, both structurally and 
+electrically, to prevent break-ups. Pressure increase in battery cells and assemblies 
+could be prevented by mechanical measures unless these measures cause an excessive 
+reduction of mission assurance. At the end of operations battery charging lines should 
+be de-activated. 
+(3) High-pressure vessels should be vented to a level guaranteeing that no break-ups can 
+occur. Leak-before-burst designs are beneficial but are not sufficient to meet all 
+passivation recommendations of propulsion and pressurisation systems. Heat pipes 
+may be left pressurised if the probability of rupture can be demonstrated to be very 
+low. 
+(4) Self-destruct systems should be designed not to cause unintentional destruction due to 
+inadvertent commands, thermal heating, or radio frequency interference. 
+(5)  Power to flywheels and momentum wheels should be terminated during the disposal 
+phase. 
+(6) Other forms of stored energy should be assessed and adequate mitigation measures 
+should be applied. 
+5.2.2 Minimise the potential for break-ups during operational phases 
+The IADC has found that observed annual rates of explosive break-ups are not compatible 
+with limiting the space debris environment. During the design of spacecraft or orbital stages, 
+each program or project should demonstrate, using failure mode and effects analyses or an 
+equivalent analysis, that there is no probable failure mode leading to accidental explosive 
+break-ups. If such failures cannot be excluded, the design or operational procedures should 
+minimise the probability of their occurrence. The probability of occurrence during all 
+operational phases should be at least below 10-3 in order to have a noticeable effect on the space 
+debris environment. 
+ 
+ 
+ 
+ 
+IADC-02-01 Rev. 4 
+13 
+IADC Space Debris Mitigation Guidelines 
+During the operational phases, a spacecraft or orbital stage should be periodically monitored 
+to detect malfunctions that could lead to a break-up or loss of control function. In the case that 
+a malfunction is detected, adequate recovery measures should be planned and conducted; 
+otherwise post-mission disposal and passivation measures for the spacecraft or orbital stage 
+should be planned and conducted. 
+5.2.3 Avoidance of intentional destruction and other harmful activities 
+Intentional destruction of a spacecraft or orbital stage, (self-destruction, intentional collision, 
+etc.), and other harmful activities that may significantly increase collision risks to other 
+spacecraft and orbital stages should be avoided. If intentional break-ups cannot be avoided, 
+they should be conducted at sufficiently low altitudes so that orbital fragments are short lived 
+and do not cause a significant collision risk. 
+5.3 Post-Mission Disposal 
+5.3.1 Geosynchronous Region 
+5.3.1.1 Objects in a Circular or Near-Circular Orbit Completely within the 
+Geosynchronous Protected Region at the End of the Mission Phase 
+Launch vehicle orbital stages and spacecraft that have reached the end of their mission phase 
+in a circular or near-circular orbit completely within the Geosynchronous Protected Region 
+should manoeuvre immediately away from GEO so as not to cause interference with 
+operational spacecraft or orbital stages still in that region. A manoeuvre should place such 
+orbital stages or spacecraft in an orbit that remains outside the GEO Protected Region for at 
+least 100 years. 
+For spacecraft and launch vehicle orbital stages that reach the end of their mission phase in a 
+circular or near-circular orbit within the GEO Protected Region, the IADC and other studies 
+have found that fulfilling the two following conditions at the end of the disposal phase should 
+give an orbit that remains above the GEO Protected Region for a long period of time: 
+(1) A minimum increase in perigee altitude of: 
+ 
+235 𝑘𝑚 + (1000 × 𝐶𝑅 × 𝐴𝑚
+⁄ ) 
+where 
+𝐶𝑅 
+is the solar radiation pressure coefficient, typically in 
+the range of about 1.2 to 1.5, 
+ 
+𝐴𝑚
+⁄  
+is the aspect area to dry mass ratio (m2 kg-1) 
+ 
+235 km 
+is the sum of the upper altitude of the GEO Protected 
+Region (200 km) and the maximum descent of a re-
+orbited spacecraft due to luni-solar & geopotential 
+perturbations (35 km). 
+(2) An eccentricity less than or equal to 0.003. 
+ 
+ 
+IADC-02-01 Rev. 4 
+14 
+IADC Space Debris Mitigation Guidelines 
+Other options enabling spacecraft to fulfil this guideline to remain above the GEO Protected 
+Region are described in the “Support to the IADC Space Debris Mitigation Guidelines” 
+document. In all cases a trajectory analysis should be conducted to confirm that the disposal 
+orbit will remain above the GEO Protected Region for at least 100 years. 
+The propulsion system for a spacecraft operating during its mission phase within the GEO 
+Protected Region should be designed not to be separated from the spacecraft. In the case that 
+there are unavoidable reasons that require separation, the propulsion system should be 
+designed to be left in an orbit that is, and will remain for at least 100 years, outside of the GEO 
+Protected Region. Regardless of whether it is separated or not, a propulsion system should be 
+designed for passivation. 
+5.3.1.2 Objects Passing Through the Geosynchronous Protected Region 
+Operators should avoid the long-term presence of launch vehicle orbital stages and spacecraft 
+in the geosynchronous region. 
+5.3.2 Objects Passing Through the Low Earth Orbit Protected Region 
+Space debris in the LEO Protected Region is expected to increase in the foreseeable future, 
+even in absence of any further human activity. Spacecraft or orbital stages that are terminating 
+their normal operations in orbits that pass through the LEO Protected Region, or have the 
+potential to interfere with the LEO Protected Region, should be de-orbited, in order of 
+preference, by 
+(1) performing a direct re-entry or  
+(2) where appropriate manoeuvre into a decay orbit with residual orbital lifetime limited 
+to be as short as practicable and no more than a maximum of 25 years. 
+Retrieval is also a post-mission disposal option. The probability of successful post-mission 
+disposal should be at least 90% with a goal of 99% or better. For large constellations, the 
+shortest possible residual orbital lifetime and/or a higher probability of success may be 
+necessary, with, for example, many constellation operators limiting residual orbital lifetimes 
+to weeks or months. 
+If a spacecraft or orbital stage is to be disposed of by re-entry into the atmosphere, debris that 
+survives to reach the surface of the Earth should not pose an undue risk to people or property. 
+Using 10-4 as the upper limit for the expected number of human casualties per re-entry is 
+recommended. This may be accomplished by limiting the amount of surviving debris or 
+confining the debris to uninhabited regions, such as broad ocean areas. Also, ground 
+environmental pollution, caused by radioactive substances, toxic substances or any other 
+environmental pollutants resulting from on-board articles, should be prevented or minimised 
+in order to be accepted as permissible. 
+ 
+ 
+IADC-02-01 Rev. 4 
+15 
+IADC Space Debris Mitigation Guidelines 
+In the case of a controlled re-entry of a spacecraft or orbital stage, the operator of the system 
+should inform the relevant air traffic and maritime traffic authorities of the re-entry time and 
+trajectory and the associated ground area. 
+5.3.3 Other Orbits 
+Spacecraft or orbital stages that are terminating their operational phases in other orbital 
+regions should be manoeuvred to reduce their orbital lifetime, commensurate with LEO 
+lifetime limitations, or relocated if they cause interference with highly utilised orbit regions. 
+5.4 Prevention of On-Orbit Collisions 
+The IADC and other studies have demonstrated that accidental collisions will drive the future 
+space debris population increase in the environment. In developing the design and mission 
+profile of a spacecraft or orbital stage, a program or project should estimate and limit the 
+probability of accidental collision with known objects during the spacecraft or orbital stage’s 
+orbital lifetime. If reliable orbital data and conjunction assessments are available, avoidance 
+manoeuvres for spacecraft during all operational phases and co-ordination of launch windows 
+for launch vehicle orbital stages should be considered. After the end of all operational phases 
+of a spacecraft or orbital stage, the integrated collision risk during the remaining orbital 
+lifetime should be minimised commensurate with post-mission disposal measures. Spacecraft 
+design should also limit the probability of collision with small debris which could cause a loss 
+of control, thus preventing post-mission disposal and passivation. 
+Spacecraft or orbital stages, in particular those that present challenges for space surveillance 
+networks, should enhance their trackability by adding on-board active and/or passive 
+components to the design and consider operational procedures which facilitate use thereof. 
+5.5 Constellations 
+Many spacecraft operating in each other’s vicinity increases the probability of collisions in case 
+of contingency, absence of post-mission disposal, and the risk coming from feedback effects in 
+case of explosive or collisional break-ups. It is strongly encouraged that constellations are 
+planned, designed, and operated in a way that will minimise the likelihood of on orbit collision 
+during normal operations and after post-mission disposal of the constellation spacecraft and 
+associated orbital stages. In addition, it is recommended to ensure sufficient separation: 
+(1) Between all parts of the constellation in order to minimise the potential collision risk 
+among constellation members; 
+(2) At intersections between orbital planes of a constellation to avoid inter-plane 
+conjunctions; 
+(3) With respect to other constellations, and with respect to spacecraft in highly utilised 
+and other densely populated orbits, in order to minimise the potential collision risk. 
+In case of spacecraft having low reliability components, or serving as demonstrators, or related 
+to constellations, it is encouraged to perform early mission operations in orbital regions that 
+ 
+ 
+IADC-02-01 Rev. 4 
+16 
+IADC Space Debris Mitigation Guidelines 
+are currently sparsely populated, that do not interfere with inhabitable space stations, and that 
+have a short orbital lifetime. 
+The cumulative risk due to more frequent re-entries from constellations and related orbital 
+stages should be minimized. 
+6 Update 
+IADC Space Debris Mitigation Guidelines were first published in 2002, and subsequently 
+updated in 2007, 2020 and 2021. These IADC Guidelines informed, and provided the basis for, 
+the development of the Space Debris Mitigation Guidelines of the United Nations (UN) 
+Committee on the Peaceful Uses of Outer Space, which were endorsed by the UN General 
+Assembly in its resolution 62/217, dated 22 December 2007. These guidelines may be updated 
+as new information becomes available regarding space activities and their influence on the 
+space environment. 

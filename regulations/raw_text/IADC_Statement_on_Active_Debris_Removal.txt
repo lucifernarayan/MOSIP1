@@ -1,0 +1,65 @@
+IADC-22-02 
+Dec 2022 
+ 
+IADC Statement on  
+Active Debris Removal 
+Issued by IADC Steering Group 
+ 
+ 
+ 
+IADC-22-02 
+1 
+IADC Statement on Active Debris Removal 
+ 
+Since 2005 modeling studies of the population of objects in Earth orbit, conducted by members 
+of the Inter-Agency Space Debris Coordination Committee (IADC), have concluded that the 
+space debris environment in certain regions below 2000 km altitude is currently unstable. In 
+other words, the number of new debris created in these regions due to future accidental 
+collisions among resident space objects is predicted to exceed the number of objects leaving 
+the regions due to the atmospheric decay [1]. 
+The IADC Space Debris Mitigation Guidelines, as well as similar guidelines of the United 
+Nations Committee on the Peaceful Uses of Outer Space and other organizations, are meant 
+only to curtail the growth of the space debris population in Earth orbit, not to reverse it [2-3]. 
+IADC studies show that space debris mitigation measures will remain necessary and would 
+need to be supported by additional measures to further limit debris growth in the long term. 
+Collisions involving non-maneuverable upper stages and spacecraft are predicted to become 
+the dominant source of new debris. Currently, the mean time interval between catastrophic 
+collisions of cataloged objects in low Earth orbit is approximately 5 to 9 years [1]. The 
+associated frequency of collisions will increase as time progresses if no active measures are 
+undertaken to counteract this trend. 
+Remediation of the near-Earth space environment involves the direct removal of space debris, 
+also known as active debris removal or ADR. Several IADC member agencies, as well as other 
+organizations, are investigating techniques and technologies that have the potential to support 
+debris removal, or are developing pioneering missions, although routine debris removal 
+operations are unlikely to commence in the near future. 
+Debris removal activities must be conducted in accordance with both, national and 
+international law, and in a manner that does not unduly impose hazards to space systems in 
+orbit or to people and property on Earth from reentering debris. 
+Low compliance with existing orbital debris mitigation best practices, such as the 25-year rule, 
+only adds more potential targets for future ADR operations which leads to greater technical 
+and economic challenges. Prioritizing and properly balancing mitigation and remediation will 
+be key to manage the long-term orbital debris problem in a cost-effective manner. 
+To satisfy the intent of this statement the IADC encourages: 
+• 
+operators to follow existing orbital debris mitigation guidelines with a post mission 
+disposal reliability as high as practicable but no less than 90%, 
+• 
+further research and cost-risk-benefit analysis on active debris removal and to identify 
+and demonstrate concepts and enabling technologies which can satisfy technical, 
+economic and safety considerations with the goal of stabilizing the debris population, 
+• 
+newly launched spacecraft and upper stages to be ADR ready in case of PMD failure. 
+ 
+ 
+ 
+ 
+IADC-22-02 
+2 
+IADC Statement on Active Debris Removal 
+References 
+[1] Stability of the Future LEO Environment Study Report, Inter-Agency Space Debris 
+Coordination Committee, IADC-12-08, 2012. 
+[2] IADC Space Debris Mitigation Guidelines, Inter-Agency Space Debris Coordination 
+Committee, IADC -02-01, 2002 (Revision 1, 2007). 
+[3] Space Debris Mitigation Guidelines of the Committee on the Peaceful Uses of Outer Space, 
+the United Nations, 2007. 

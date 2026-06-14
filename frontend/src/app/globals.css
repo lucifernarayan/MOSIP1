@@ -1,0 +1,542 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+/* ══════════════════════════════════════════════════════════════
+   MOSIP MISSION CONTROL — GLOBAL DESIGN SYSTEM v3.0
+   Aesthetic: Instrument, not decoration.
+   Reference: NASA Mission Control, LeoLabs, Palantir Foundry
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Design Tokens ─────────────────────────────────────────────────────────── */
+:root {
+  /* ── Surface Hierarchy ── */
+  --c-base:        #080c12;        /* Page background — near-black charcoal */
+  --c-surface-0:   #0b0f17;        /* Primary panel surface */
+  --c-surface-1:   #0e1420;        /* Elevated panel surface */
+  --c-surface-2:   #121926;        /* Hover/active surface */
+
+  /* ── Borders ── */
+  --c-border:      rgba(255,255,255,0.055);   /* Default hairline border */
+  --c-border-hi:   rgba(255,255,255,0.095);   /* High-contrast border */
+
+  /* ── Operational Cyan — Primary Accent ── */
+  --c-cyan:        #4dd9f5;
+  --c-cyan-dim:    rgba(77,217,245,0.55);
+  --c-cyan-muted:  rgba(77,217,245,0.18);
+  --c-cyan-ghost:  rgba(77,217,245,0.07);
+
+  /* ── Status Colors (ONLY these are saturated) ── */
+  --c-nominal:     #3de89b;        /* Green: nominal/compliant */
+  --c-watch:       #60b8f0;        /* Ice blue: watch/attention */
+  --c-elevated:    #f5a623;        /* Amber: elevated risk */
+  --c-critical:    #ef4343;        /* Red: critical/non-compliant */
+
+  /* ── AI Layer — Violet (EXCLUSIVELY for AI output) ── */
+  --c-ai:          #a78bfa;
+  --c-ai-dim:      rgba(167,139,250,0.55);
+  --c-ai-muted:    rgba(167,139,250,0.18);
+  --c-ai-ghost:    rgba(167,139,250,0.07);
+
+  /* ── Text Hierarchy ── */
+  --t-primary:     #dde5ef;        /* Primary text — slightly desaturated */
+  --t-secondary:   #7a8ba0;        /* Secondary / labels */
+  --t-meta:        #3d4f62;        /* Metadata / timestamps / low emphasis */
+  --t-accent:      var(--c-cyan);  /* Accent / interactive */
+
+  /* ── Layout Dimensions ── */
+  --sidebar-w:     52px;           /* Persistent sidebar — never collapses */
+  --topbar-h:      44px;
+  --border-r:      6px;            /* Panel border radius — tight, not round */
+
+  /* ── Grain Texture ── */
+  --noise-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+
+  /* ── Legacy aliases (backward compat with existing pages) ── */
+  --color-bg:         var(--c-base);
+  --color-surface:    var(--c-surface-0);
+  --color-accent-1:   var(--c-cyan);
+  --color-accent-2:   var(--c-critical);
+  --color-success:    var(--c-nominal);
+  --color-warning:    var(--c-elevated);
+  --color-border:     var(--c-border);
+  --color-border-danger: rgba(239,67,67,0.28);
+  --sidebar-w-collapsed: var(--sidebar-w);
+  --sidebar-w-expanded:  200px;
+}
+
+/* ── Base Reset ─────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Space Grotesk", "Barlow Condensed", system-ui, sans-serif;
+  background: var(--c-base);
+  color: var(--t-primary);
+  min-height: 100dvh;
+  overflow-x: hidden;
+  /* Subtle grain texture on large background areas */
+  background-image: var(--noise-url);
+  background-blend-mode: overlay;
+}
+
+/* ── Typography System ──────────────────────────────────────────────────────── */
+
+/* Geometric/condensed for UI chrome, headings, navigation */
+.font-display {
+  font-family: "Barlow Condensed", "Space Grotesk", system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* Monospace EXCLUSIVELY for numeric/data values */
+.font-data {
+  font-family: "JetBrains Mono", "Fira Code", "SF Mono", monospace;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Legacy alias */
+.font-digital {
+  font-family: "JetBrains Mono", "Fira Code", "SF Mono", monospace;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Section labels: uppercase, wide tracking, low contrast — recede */
+.label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--t-meta);
+  font-weight: 400;
+}
+
+/* Legacy alias */
+.eyebrow {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--t-meta);
+}
+
+/* Data numerics — most prominent text on any screen */
+.data-value {
+  font-family: "JetBrains Mono", monospace;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  color: var(--t-primary);
+}
+
+/* AI-generated content — violet accent, always distinct */
+.ai-text {
+  color: var(--c-ai);
+}
+.ai-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--c-ai-dim);
+}
+
+/* ── Panel System ───────────────────────────────────────────────────────────── */
+
+/* Primary panel: tight border, no glow by default */
+.panel {
+  background: var(--c-surface-0);
+  border: 1px solid var(--c-border);
+  border-radius: var(--border-r);
+}
+
+/* Elevated panel */
+.panel-hi {
+  background: var(--c-surface-1);
+  border: 1px solid var(--c-border-hi);
+  border-radius: var(--border-r);
+}
+
+/* AI layer panel — violet tint */
+.panel-ai {
+  background: var(--c-ai-ghost);
+  border: 1px solid rgba(167,139,250,0.18);
+  border-radius: var(--border-r);
+}
+
+/* Status panels — only when operationally significant */
+.panel-nominal  { border-color: rgba(61,232,155,0.2);  }
+.panel-elevated { border-color: rgba(245,166,35,0.22); }
+.panel-critical {
+  border-color: rgba(239,67,67,0.25);
+  box-shadow: 0 0 18px rgba(239,67,67,0.06);
+}
+
+/* ── Legacy Cyber Panel Aliases ─────────────────────────────────────────────── */
+.cyber-panel {
+  background: var(--c-surface-0);
+  border: 1px solid var(--c-border);
+  border-radius: var(--border-r);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cyber-panel-danger  { border-color: rgba(239,67,67,0.25); box-shadow: 0 0 18px rgba(239,67,67,0.06); }
+.cyber-panel-glow    { box-shadow: 0 0 20px rgba(77,217,245,0.1); }
+.cyber-panel-success { border-color: rgba(61,232,155,0.2); }
+.cyber-panel-warning { border-color: rgba(245,166,35,0.2); }
+
+/* ── Grid Background — very subtle ─────────────────────────────────────────── */
+.cyber-grid {
+  background-image:
+    linear-gradient(rgba(77,217,245,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77,217,245,0.018) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ── Scanline Sweep — radar panel effect ───────────────────────────────────── */
+.scanline {
+  position: relative;
+  overflow: hidden;
+}
+.scanline::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(77,217,245,0.05), rgba(77,217,245,0.12), rgba(77,217,245,0.05), transparent);
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+  z-index: 50;
+  top: -1px;
+}
+@keyframes scanline { 0% { top: -1px; } 100% { top: 100%; } }
+
+/* ── Live Pulse Dot ─────────────────────────────────────────────────────────── */
+.pulse-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+  display: inline-block;
+}
+.pulse-dot::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.35;
+  animation: pulse-ring 2.4s ease-in-out infinite;
+}
+@keyframes pulse-ring {
+  0%, 100% { transform: scale(1); opacity: 0.35; }
+  50%       { transform: scale(2.5); opacity: 0; }
+}
+
+/* ── Lock-on Selection Animation ────────────────────────────────────────────── */
+.lock-on {
+  position: relative;
+  transition: all 0.2s ease;
+}
+.lock-on::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+.lock-on.selected::before {
+  border-color: var(--c-cyan);
+  box-shadow: 0 0 12px rgba(77,217,245,0.15), inset 0 0 8px rgba(77,217,245,0.04);
+}
+
+/* ── Target-pulse: sharp alert, settles ────────────────────────────────────── */
+@keyframes target-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(77,217,245,0.4); }
+  40%  { box-shadow: 0 0 0 8px rgba(77,217,245,0); }
+  100% { box-shadow: 0 0 0 0 rgba(77,217,245,0); }
+}
+.target-pulse { animation: target-pulse 0.6s ease-out forwards; }
+
+@keyframes target-pulse-critical {
+  0%   { box-shadow: 0 0 0 0 rgba(239,67,67,0.5); }
+  40%  { box-shadow: 0 0 0 10px rgba(239,67,67,0); }
+  100% { box-shadow: 0 0 0 0 rgba(239,67,67,0); }
+}
+.target-pulse-critical { animation: target-pulse-critical 0.6s ease-out forwards; }
+
+/* ── Risk Confidence Bar ────────────────────────────────────────────────────── */
+.risk-bar-track {
+  background: rgba(255,255,255,0.05);
+  border-radius: 2px;
+  height: 3px;
+  overflow: hidden;
+}
+.risk-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Confidence Radial ──────────────────────────────────────────────────────── */
+.confidence-ring {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Status Tag ─────────────────────────────────────────────────────────────── */
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 3px;
+  border: 1px solid;
+  font-weight: 500;
+}
+.status-tag.nominal   { color: var(--c-nominal);  border-color: rgba(61,232,155,0.25);  background: rgba(61,232,155,0.06); }
+.status-tag.watch     { color: var(--c-watch);    border-color: rgba(96,184,240,0.25);  background: rgba(96,184,240,0.06); }
+.status-tag.elevated  { color: var(--c-elevated); border-color: rgba(245,166,35,0.25);  background: rgba(245,166,35,0.06); }
+.status-tag.critical  { color: var(--c-critical); border-color: rgba(239,67,67,0.28);   background: rgba(239,67,67,0.06); }
+.status-tag.ai        { color: var(--c-ai);       border-color: rgba(167,139,250,0.25); background: rgba(167,139,250,0.06); }
+
+/* ── Data Table ─────────────────────────────────────────────────────────────── */
+.data-table { width: 100%; border-collapse: collapse; }
+.data-table th {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--t-meta);
+  padding: 6px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--c-border);
+  font-weight: 400;
+}
+.data-table td {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--t-secondary);
+  padding: 7px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.025);
+  vertical-align: middle;
+}
+.data-table tr:hover td { background: rgba(255,255,255,0.018); }
+.data-table td.num { text-align: right; color: var(--t-primary); }
+.data-table tr.selected td { background: var(--c-cyan-ghost); }
+
+/* ── Mission Log Entry ──────────────────────────────────────────────────────── */
+.log-entry {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.028);
+  align-items: baseline;
+}
+.log-entry .log-ts {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  color: var(--t-meta);
+  white-space: nowrap;
+}
+.log-entry .log-msg {
+  font-size: 11px;
+  color: var(--t-secondary);
+  line-height: 1.5;
+}
+.log-entry.ai-entry .log-msg { color: var(--c-ai); }
+
+/* ── CTA Button ─────────────────────────────────────────────────────────────── */
+.btn-primary {
+  border: 1px solid var(--c-cyan);
+  background: transparent;
+  color: var(--c-cyan);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.btn-primary:hover {
+  background: rgba(77,217,245,0.08);
+  box-shadow: 0 0 24px rgba(77,217,245,0.15);
+}
+.btn-primary:active { transform: scale(0.98); }
+.btn-primary:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* ── Ghost Button ───────────────────────────────────────────────────────────── */
+.btn-ghost {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  color: var(--t-secondary);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  border-radius: 4px;
+  font-family: "JetBrains Mono", monospace;
+}
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.055);
+  color: var(--t-primary);
+  border-color: rgba(77,217,245,0.18);
+}
+
+/* ── Legacy CTA aliases ─────────────────────────────────────────────────────── */
+.cta-glow {
+  border: 1px solid var(--c-cyan);
+  background: transparent;
+  color: var(--c-cyan);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.cta-glow:hover {
+  background: rgba(77,217,245,0.08);
+  box-shadow: 0 0 24px rgba(77,217,245,0.15);
+}
+.cta-glow:active { transform: scale(0.98); }
+.cta-glow:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* ── Search Input ───────────────────────────────────────────────────────────── */
+.search-glass {
+  background: var(--c-surface-0);
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  padding: 7px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.search-glass:focus-within {
+  border-color: rgba(77,217,245,0.28);
+  box-shadow: 0 0 12px rgba(77,217,245,0.07);
+}
+
+/* ── Scrollbars — minimal ───────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(77,217,245,0.18); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(77,217,245,0.32); }
+
+/* Primary page scrollbar styles */
+.main-scroll-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.main-scroll-container::-webkit-scrollbar-track {
+  background: rgba(8, 12, 18, 0.4);
+  border-left: 1px solid var(--c-border);
+}
+.main-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(77, 217, 245, 0.25);
+  border-radius: 4px;
+}
+.main-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(77, 217, 245, 0.5);
+}
+
+/* ── Range Input ────────────────────────────────────────────────────────────── */
+input[type="range"] { accent-color: var(--c-cyan); cursor: pointer; }
+
+/* ── Selection ──────────────────────────────────────────────────────────────── */
+::selection { background: rgba(77,217,245,0.2); color: #fff; }
+
+/* ══════════════════════════════════════════════════════════════
+   MOTION SYSTEM
+   ══════════════════════════════════════════════════════════════ */
+
+/* Loading — "System Initializing" sequence */
+@keyframes loading {
+  0%   { width: 0%; }
+  40%  { width: 60%; }
+  80%  { width: 84%; }
+  100% { width: 94%; }
+}
+
+/* Atmosphere shimmer */
+@keyframes atmosphere-pulse {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50%       { opacity: 0.75; transform: scale(1.015); }
+}
+.atmosphere-pulse { animation: atmosphere-pulse 5s ease-in-out infinite; }
+
+/* Border glow — active state only */
+@keyframes border-glow {
+  0%, 100% { border-color: rgba(77,217,245,0.12); box-shadow: 0 0 10px rgba(77,217,245,0.06); }
+  50%       { border-color: rgba(77,217,245,0.38); box-shadow: 0 0 22px rgba(77,217,245,0.14); }
+}
+.animate-border-glow { animation: border-glow 3.5s ease-in-out infinite; }
+
+@keyframes border-glow-danger {
+  0%, 100% { border-color: rgba(239,67,67,0.18); }
+  50%       { border-color: rgba(239,67,67,0.45); box-shadow: 0 0 22px rgba(239,67,67,0.14); }
+}
+.animate-border-glow-danger { animation: border-glow-danger 3.5s ease-in-out infinite; }
+
+/* Flow dash for orbit arcs */
+@keyframes flow-dash { 0% { stroke-dashoffset: 40; } 100% { stroke-dashoffset: -40; } }
+.flow-path { stroke-dasharray: 6 14; animation: flow-dash 2s linear infinite; }
+
+/* Node pulse — agent nodes */
+@keyframes node-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(77,217,245,0.25); }
+  50%       { box-shadow: 0 0 0 5px rgba(77,217,245,0); }
+}
+.node-pulse { animation: node-pulse 2.2s ease-in-out infinite; }
+
+/* AI violet node pulse */
+@keyframes ai-node-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(167,139,250,0.3); }
+  50%       { box-shadow: 0 0 0 6px rgba(167,139,250,0); }
+}
+.ai-node-pulse { animation: ai-node-pulse 2.2s ease-in-out infinite; }
+
+/* Node pop-in */
+@keyframes node-check-in {
+  0%   { transform: scale(0) rotate(-90deg); opacity: 0; }
+  60%  { transform: scale(1.15) rotate(4deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* Stagger entry */
+@keyframes stagger-in {
+  0%   { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.stagger-in {
+  animation: stagger-in 0.3s ease-out both;
+}
+
+/* Tick counter */
+@keyframes tick { 0% { opacity: 0.3; } 50% { opacity: 1; } 100% { opacity: 0.3; } }
+.tick-blink { animation: tick 1s step-end infinite; }
+
+/* ── Tailwind v4 theme extensions ───────────────────────────────────────────── */
+@theme {
+  --color-mosip-bg:    #080c12;
+  --color-mosip-cyan:  #4dd9f5;
+  --color-mosip-red:   #ef4343;
+  --color-mosip-green: #3de89b;
+  --color-mosip-amber: #f5a623;
+  --color-mosip-ai:    #a78bfa;
+}
