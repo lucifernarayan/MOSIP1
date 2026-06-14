@@ -1,28 +1,22 @@
 """
 rag_service.py
 --------------
-Unified Qdrant search layer for MOSIP regulatory knowledge base.
-Connects to the local persistent Qdrant store populated with
-ESA / IADC / NASA regulatory document embeddings.
+Unified search layer for MOSIP regulatory knowledge base.
+Uses a lightweight, high-performance, memory-efficient pure Python TF-IDF engine
+to run on resource-constrained hosting (e.g. Render free tier 512MB RAM).
 """
 
+import os
+import json
+import math
+import re
 import logging
 from qdrant_client import QdrantClient
-from sentence_transformers import SentenceTransformer
 from backend.config import QDRANT_PATH, QDRANT_COLLECTION
 
 logger = logging.getLogger(__name__)
 
-# ── Embedding model (same one used during upload) ────────────────────────────
-_model = None
-
-def _get_model():
-    global _model
-    if _model is None:
-        _model = SentenceTransformer("BAAI/bge-small-en-v1.5")
-    return _model
-
-# ── Qdrant client (absolute path from config, not fragile relative path) ─────
+# ── Qdrant client (for health checks only) ────────────────────────────────────
 _client = None
 
 def _get_client():
@@ -31,45 +25,110 @@ def _get_client():
         _client = QdrantClient(path=QDRANT_PATH)
     return _client
 
+# ── Pure-Python Memory-Efficient TF-IDF RAG Engine ──────────────────────────
+_chunks = None
+
+def _load_chunks():
+    global _chunks
+    if _chunks is not None:
+        return _chunks
+    
+    _chunks = []
+    # Search in regulations/chunks/ relative to this file
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    chunks_dir = os.path.join(os.path.dirname(current_dir), "regulations", "chunks")
+    
+    # Fallback to local path relative to working directory
+    if not os.path.exists(chunks_dir):
+        chunks_dir = "regulations/chunks"
+        
+    if os.path.exists(chunks_dir):
+        logger.info(f"Loading RAG regulations from: {chunks_dir}")
+        for filename in os.listdir(chunks_dir):
+            if filename.endswith(".json"):
+                filepath = os.path.join(chunks_dir, filename)
+                try:
+                    with open(filepath, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                        if isinstance(data, list):
+                            for item in data:
+                                _chunks.append({
+                                    "text": item.get("text", ""),
+                                    "document": item.get("source_document", filename.replace(".json", "")),
+                                    "source": item.get("source_document", filename.replace(".json", ""))
+                                })
+                except Exception as e:
+                    logger.error(f"Error loading chunk file {filename}: {e}")
+    else:
+        logger.error(f"Regulations chunks directory not found at: {chunks_dir}")
+        
+    logger.info(f"Loaded {len(_chunks)} regulations chunks successfully.")
+    return _chunks
+
+def tokenize(text: str) -> list[str]:
+    # Extract lowercased words of length >= 3
+    return re.findall(r"\b\w{3,}\b", text.lower())
 
 # ── Core search ───────────────────────────────────────────────────────────────
 
 def search_regulations(question: str, top_k: int = 5) -> list[dict]:
     """
-    Semantic search over the regulatory knowledge base.
-
-    Returns a list of dicts with keys:
-        score, source, document, text
+    Search over the regulatory knowledge base using memory-efficient TF-IDF.
     """
-    model  = _get_model()
-    client = _get_client()
-
-    query_embedding = model.encode(
-        question,
-        normalize_embeddings=True
-    ).tolist()
-
-    results = client.query_points(
-        collection_name=QDRANT_COLLECTION,
-        query=query_embedding,
-        limit=top_k,
-    ).points
-
-    return [
-        {
-            "score":    round(result.score, 4),
-            "source":   result.payload.get("source", ""),
-            "document": result.payload.get("document", ""),
-            "text":     result.payload.get("text", ""),
-        }
-        for result in results
-    ]
+    chunks = _load_chunks()
+    if not chunks:
+        return []
+        
+    query_terms = tokenize(question)
+    if not query_terms:
+        return []
+        
+    # Calculate Document Frequency (DF) for query terms
+    df = {}
+    for term in query_terms:
+        df[term] = sum(1 for c in chunks if term in c["text"].lower())
+        
+    N = len(chunks)
+    scored_results = []
+    
+    for chunk in chunks:
+        text_lower = chunk["text"].lower()
+        score = 0.0
+        
+        for term in query_terms:
+            tf = text_lower.count(term)
+            if tf > 0:
+                # Smoothed Inverse Document Frequency (IDF)
+                idf = math.log(1.0 + N / (1.0 + df[term]))
+                score += tf * idf
+                
+                # Boost if term appears in document title
+                if term in chunk["document"].lower():
+                    score += 5.0 * idf
+                    
+        if score > 0:
+            scored_results.append({
+                "score": round(score, 4),
+                "source": chunk["source"],
+                "document": chunk["document"],
+                "text": chunk["text"]
+            })
+            
+    # Sort by score descending
+    scored_results.sort(key=lambda x: x["score"], reverse=True)
+    
+    # Normalize score to 0.0 - 1.0 range
+    if scored_results:
+        max_score = scored_results[0]["score"]
+        for r in scored_results:
+            r["score"] = round(r["score"] / max_score, 4)
+            
+    return scored_results[:top_k]
 
 
 def build_compliance_queries(satellite_data: dict) -> list[str]:
     """
     Generate contextual regulation search queries from satellite orbital data.
-    Used to retrieve the most relevant regulatory chunks before LLM reasoning.
     """
     orbit_type = satellite_data.get("orbit_type", "LEO")
     altitude   = satellite_data.get("altitude_km", 0)
@@ -98,7 +157,6 @@ def build_compliance_queries(satellite_data: dict) -> list[str]:
 def get_applicable_regulations(satellite_data: dict, top_k: int = 4) -> list[dict]:
     """
     Run multiple contextual queries and deduplicate results by chunk text.
-    Returns the top regulations most applicable to this satellite.
     """
     queries  = build_compliance_queries(satellite_data)
     seen     = set()
